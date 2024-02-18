@@ -1,4 +1,18 @@
-import styles from './sidebar.module.css'
+import MenuLink from './menuLink/menuLink';
+import styles from './sidebar.module.css';
+import Image from 'next/image';
+import { 
+    MdAnalytics,
+    MdAttachMoney,
+    MdDashboard,
+    MdHelpCenter,
+    MdLogout,
+    MdOutlineSettings,
+    MdPeople,
+    MdShoppingBag,
+    MdSupervisedUserCircle,
+    MdWork
+ } from "react-icons/md";
 
 const menuItems = [
     {
@@ -63,9 +77,32 @@ const menuItems = [
     },
   ];
   
+
 const Sidebar = () => {
   return (
-    <div className={styles.container}>Sidebar</div>
+    <div className={styles.container}>
+        <div className={styles.user}>
+            <Image className={styles.userImage} src='/noavatar.png' alt="NoAvatar" width={50} height={50} />
+            <div className={styles.userDetails}>
+            <span className={styles.username}>Subash Chand Thakuri</span>
+            <span className={styles.userTitle}>Administrator</span>
+            </div>
+        </div>
+        <ul className={styles.list}>
+            {menuItems.map(cat=>(
+                <li key={cat.title}>
+                    <span className={styles.cat}>{cat.title}</span>
+                    {cat.list.map((item)=>(
+                        <MenuLink item={item} key={item.title} />
+                    ))}
+                </li>
+            ))}
+        </ul>
+        <button className={styles.logout}>
+            <MdLogout />
+            Logout
+        </button>
+    </div>
   )
 }
 
