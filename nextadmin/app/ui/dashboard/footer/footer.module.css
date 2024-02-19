@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--textSoft);
+    margin-top: 30px;
+
+}
+
+.logo{
+    font-weight: bold;
+}
+
+.text{
+    font-size: 12px;
+    
+}
