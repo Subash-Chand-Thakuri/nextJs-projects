@@ -26,12 +26,14 @@
     background-color: #2e374a;
     padding: 10px;
     border-radius: 10px;
+    width: max-content;
 }
 
 .input{
     background-color: transparent;
     border: none;
-    color: var(--textSoft)
+    color: var(--textSoft);
+    outline: none;
 }
 .icons{
     display: flex;

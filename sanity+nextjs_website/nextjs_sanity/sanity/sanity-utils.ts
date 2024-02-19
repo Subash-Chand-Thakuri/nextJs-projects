@@ -1,4 +1,4 @@
-import { Project } from "@/types/Project.1";
+import { Project } from "@/types/Project";
 import { Page } from "@/types/Page";
 import {createClient,groq} from "next-sanity";
 import  clientConfig from "./config/client-config"

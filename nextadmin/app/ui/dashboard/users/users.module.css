@@ -28,14 +28,14 @@
     padding: 10px;
 }
 
-.product{
+.user{
     display: flex;
     align-items: center;
     gap: 10px;
 
 }
 
-.productImage{
+.userImage{
     border-radius: 50%;
     object-fit: cover;
 }
