@@ -1,7 +1,9 @@
+// import { fetchSingleProduct } from "@/app/lib/data";
 import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 import Image from "next/image";
 
 const SingleProductPage = () => {
+
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
