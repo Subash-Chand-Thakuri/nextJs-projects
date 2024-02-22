@@ -52,7 +52,7 @@ const UsersPage = async ({searchParams}) => {
             <td>{user.isActive ? "Active": "Passive"}</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/dashboard/users/test">
+                <Link href={`/dashboard/users/${user.id}`}>
                   <button className={`${styles.button} ${styles.view}`}>
                     View
                   </button>

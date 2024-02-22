@@ -18,6 +18,19 @@ export const fetchUsers = async (q,page) =>{
     }
 }
 
+export const fetchUser = async (id) =>{
+
+    try{
+        connectToDB();
+        const user = await User.findById(id);
+        
+        return user;
+    }catch(err){
+        console.log(err)
+        throw new Error("Failed to fetch user!",err)
+    }
+}
+
 export const fetchProducts = async (q,page) =>{
     const regex = new RegExp(q,"i");
 
@@ -34,15 +47,15 @@ export const fetchProducts = async (q,page) =>{
     }
 }
 
-// export const fetchSingleProduct = async (id) =>{
-//     const regex = new RegExp(id,"i");
+export const fetchProduct = async (id) =>{
 
-//     try{
-//         connectToDB();
-//         const product = await Product.find({id: {$regex: regex}});
-//         return product;
-//     }catch(err){
-//         console.log(err)
-//         throw new Error("Failed to fetch product!",err)
-//     }
-// }
+    try{
+        connectToDB();
+        const product = await Product.findById(id);
+        
+        return product;
+    }catch(err){
+        console.log(err)
+        throw new Error("Failed to fetch product!",err)
+    }
+}

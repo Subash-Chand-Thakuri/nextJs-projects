@@ -58,7 +58,7 @@ const ProductsPage = async({searchParams}) => {
                 </button>
               </Link>
               <form action={deleteProduct}>
-                <input type="text" name="id" value={product.id} hidden/>
+                <input type="hidden" name="id" value={product.id} />
               <button className={`${styles.button} ${styles.delete}`}>
                 Delete
               </button>
